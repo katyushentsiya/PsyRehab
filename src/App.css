@@ -55,40 +55,46 @@
 
 
 .main-block {
-    margin-left: 200px;
-    width: 650px;
-    height: 200px;
-    text-align: center;
+    /* Забираємо вирівнювання по центру для всього блоку */
+    width: 650px; /* Залишаємо задану ширину */
+    /* height: auto; !* Висота буде залежати від вмісту *! */
     margin-top: 200px; /* Невеликий відступ після хедера */
+    margin-left: 200px; /* Залишаємо лівий відступ */
+    text-align: left; /* Вирівнюємо текст всередині блоку по лівому краю */
 }
 
   
 .main-block h2 {
-    font-size: 48px;
-    margin-bottom: 30px; /* Зменшуємо відступ між заголовком та підзаголовком */
+    font-size: 48px; /* Залишаємо заданий розмір */
+    margin-bottom: 20px; /* Зменшуємо відступ між заголовком та підзаголовком */
+    line-height: 1.2; /* Додаємо міжрядковий інтервал для кращого вигляду багаторядкового тексту */
 }
   
 .main-block p {
     margin-top: 0;
     margin-bottom: 50px;
-    width: 446px;
-    height: 87px;
-    text-align: center; /* Вирівнюємо текст підзаголовка по лівій стороні */
-    margin-left: auto; /* Видаляємо лівий відступ */
-    margin-right: auto; /* Залишаємо правий відступ auto для вирівнювання блоку */
-    font-size: 24px; /* Задаємо розмір шрифту підзаголовка 24px */
+    width: 446px; /* Залишаємо задану ширину */
+    text-align: right; /* Вирівнюємо текст підзаголовка по центру */
+    margin-left: auto; /* Центруємо блок підзаголовка по горизонталі */
+    margin-right: auto; /* Центруємо блок підзаголовка по горизонталі */
+    font-size: 24px;
+    line-height: 1.5;
 }
   
 .main-block button {
-    width: 215px;
-    height: 60px;
+    width: 215px; /* Залишаємо задану ширину */
+    height: 60px; /* Залишаємо задану висоту */
     background-color: #92C5DB;
     border: none;
     border-radius: 5px;
     box-sizing: border-box;
-    margin: 0;
-    color: black; /* Задаємо чорний колір тексту */
-    font-size: 24px; /* Задаємо розмір шрифту 24 пікселі */
+    margin-top: 30px; /* Додаємо відступ зверху від тексту */
+    color: black; /* Залишаємо чорний колір тексту */
+    font-size: 24px; /* Залишаємо заданий розмір шрифту */
+    text-align: center; /* Вирівнюємо текст кнопки по центру */
+    margin-left: auto; /* Центруємо кнопку по горизонталі */
+    margin-right: auto; /* Центруємо кнопку по горизонталі */
+    display: block; /* Робимо кнопку блоковим елементом для роботи auto margin */
 }
 
 .background-image {
@@ -97,7 +103,7 @@
     right: 0;
     width: 50%; /* Займає праву половину контейнера */
     height: 100%;
-    background-image: url('/ваша_картинка.jpg'); /* Замініть на ваш шлях */
+    background-image: url('/main.jpg'); /* Замініть на ваш шлях */
     background-repeat: no-repeat;
     background-position: right center;
     background-size: contain; /* Або cover, auto */
