@@ -1,0 +1,106 @@
+.header {
+    background-image: url('/background-header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 86px;
+    width: 1180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 50%; /* Змінюємо відступ зліва на 50% */
+    transform: translateX(-50%); /* Центруємо хедер */
+}
+  
+.header h1 {
+    color: black;
+    margin: 0;
+    font-size: 28px;
+    line-height: 28px;
+}
+  
+.header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+  
+.header nav li {
+    margin-right: 70px;
+}
+  
+.header nav li a {
+    color: black; /* Змінюємо колір посилань на чорний */
+    text-decoration: none; /* Видаляємо підкреслення */
+}
+  
+.header nav li:last-child {
+    margin-right: 0;
+}
+  
+.header button {
+    width: 180px;
+    height: 42px;
+    background-color: transparent; /* Робимо фон кнопки прозорим */
+    border: 1px solid black; /* Додаємо чорну обводку */
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 0;
+    color: black; /* Додаємо чорний колір тексту */
+}
+
+
+.main-block {
+    margin-left: 200px;
+    width: 650px;
+    height: 200px;
+    text-align: center;
+    margin-top: 200px; /* Невеликий відступ після хедера */
+}
+
+  
+.main-block h2 {
+    font-size: 48px;
+    margin-bottom: 30px; /* Зменшуємо відступ між заголовком та підзаголовком */
+}
+  
+.main-block p {
+    margin-top: 0;
+    margin-bottom: 50px;
+    width: 446px;
+    height: 87px;
+    text-align: center; /* Вирівнюємо текст підзаголовка по лівій стороні */
+    margin-left: auto; /* Видаляємо лівий відступ */
+    margin-right: auto; /* Залишаємо правий відступ auto для вирівнювання блоку */
+    font-size: 24px; /* Задаємо розмір шрифту підзаголовка 24px */
+}
+  
+.main-block button {
+    width: 215px;
+    height: 60px;
+    background-color: #92C5DB;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 0;
+    color: black; /* Задаємо чорний колір тексту */
+    font-size: 24px; /* Задаємо розмір шрифту 24 пікселі */
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%; /* Займає праву половину контейнера */
+    height: 100%;
+    background-image: url('/ваша_картинка.jpg'); /* Замініть на ваш шлях */
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain; /* Або cover, auto */
+    z-index: -1; /* Позаду основного контенту */
+  }
+
