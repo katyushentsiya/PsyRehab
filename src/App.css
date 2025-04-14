@@ -1,112 +1,177 @@
 .header {
-    background-image: url('/background-header.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left;
-    height: 86px;
-    width: 1180px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0;
-    color: black;
-    position: fixed;
-    top: 0;
-    left: 50%; /* Змінюємо відступ зліва на 50% */
-    transform: translateX(-50%); /* Центруємо хедер */
-}
-  
-.header h1 {
-    color: black;
-    margin: 0;
-    font-size: 28px;
-    line-height: 28px;
-}
-  
-.header nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-}
-  
-.header nav li {
-    margin-right: 70px;
-}
-  
-.header nav li a {
-    color: black; /* Змінюємо колір посилань на чорний */
-    text-decoration: none; /* Видаляємо підкреслення */
-}
-  
-.header nav li:last-child {
-    margin-right: 0;
-}
-  
-.header button {
-    width: 180px;
-    height: 42px;
-    background-color: transparent; /* Робимо фон кнопки прозорим */
-    border: 1px solid black; /* Додаємо чорну обводку */
-    border-radius: 5px;
-    box-sizing: border-box;
-    margin: 0;
-    color: black; /* Додаємо чорний колір тексту */
+  background-image: url('/background-header.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 86px;
+  width: 1180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 50%; /* Змінюємо відступ зліва на 50% */
+  transform: translateX(-50%); /* Центруємо хедер */
 }
 
+.header h1 {
+  color: black;
+  margin: 0;
+  font-size: 28px;
+  line-height: 28px;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.header nav li {
+  margin-right: 70px;
+}
+
+.header nav li a {
+  color: black; /* Змінюємо колір посилань на чорний */
+  text-decoration: none; /* Видаляємо підкреслення */
+}
+
+.header nav li:last-child {
+  margin-right: 0;
+}
+
+.header button {
+  width: 180px;
+  height: 42px;
+  background-color: transparent; /* Робимо фон кнопки прозорим */
+  border: 1px solid black; /* Додаємо чорну обводку */
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 0;
+  color: black; /* Додаємо чорний колір тексту */
+}
 
 .main-block {
-    /* Забираємо вирівнювання по центру для всього блоку */
-    width: 650px; /* Залишаємо задану ширину */
-    /* height: auto; !* Висота буде залежати від вмісту *! */
-    margin-top: 200px; /* Невеликий відступ після хедера */
-    margin-left: 200px; /* Залишаємо лівий відступ */
-    text-align: left; /* Вирівнюємо текст всередині блоку по лівому краю */
+  /* Забираємо вирівнювання по центру для всього блоку */
+  width: 650px; /* Залишаємо задану ширину */
+  /* height: auto; /* Висота буде залежати від вмісту */
+  margin-top: 200px; /* Невеликий відступ після хедера */
+  margin-left: 200px; /* Залишаємо лівий відступ */
+  text-align: left; /* Вирівнюємо текст всередині блоку по лівому краю */
 }
 
-  
 .main-block h2 {
-    font-size: 48px; /* Залишаємо заданий розмір */
-    margin-bottom: 20px; /* Зменшуємо відступ між заголовком та підзаголовком */
-    line-height: 1.2; /* Додаємо міжрядковий інтервал для кращого вигляду багаторядкового тексту */
+  font-size: 48px; /* Залишаємо заданий розмір */
+  margin-bottom: 20px; /* Зменшуємо відступ між заголовком та підзаголовком */
+  line-height: 1.2; /* Додаємо міжрядковий інтервал для кращого вигляду багаторядкового тексту */
 }
-  
+
 .main-block p {
-    margin-top: 0;
-    margin-bottom: 50px;
-    width: 446px; /* Залишаємо задану ширину */
-    text-align: right; /* Вирівнюємо текст підзаголовка по центру */
-    margin-left: auto; /* Центруємо блок підзаголовка по горизонталі */
-    margin-right: auto; /* Центруємо блок підзаголовка по горизонталі */
-    font-size: 24px;
-    line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 50px;
+  width: 446px; /* Залишаємо задану ширину */
+  text-align: right; /* Вирівнюємо текст підзаголовка по центру */
+  margin-left: auto; /* Центруємо блок підзаголовка по горизонталі */
+  margin-right: auto; /* Центруємо блок підзаголовка по горизонталі */
+  font-size: 24px;
+  line-height: 1.5;
 }
-  
+
 .main-block button {
-    width: 215px; /* Залишаємо задану ширину */
-    height: 60px; /* Залишаємо задану висоту */
-    background-color: #92C5DB;
-    border: none;
-    border-radius: 5px;
-    box-sizing: border-box;
-    margin-top: 30px; /* Додаємо відступ зверху від тексту */
-    color: black; /* Залишаємо чорний колір тексту */
-    font-size: 24px; /* Залишаємо заданий розмір шрифту */
-    text-align: center; /* Вирівнюємо текст кнопки по центру */
-    margin-left: auto; /* Центруємо кнопку по горизонталі */
-    margin-right: auto; /* Центруємо кнопку по горизонталі */
-    display: block; /* Робимо кнопку блоковим елементом для роботи auto margin */
+  width: 215px; /* Залишаємо задану ширину */
+  height: 60px; /* Залишаємо задану висоту */
+  background-color: #92C5DB;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 30px; /* Додаємо відступ зверху від тексту */
+  color: black; /* Залишаємо чорний колір тексту */
+  font-size: 24px; /* Залишаємо заданий розмір шрифту */
+  text-align: center; /* Вирівнюємо текст кнопки по центру */
+  margin-left: auto; /* Центруємо кнопку по горизонталі */
+  margin-right: auto; /* Центруємо кнопку по горизонталі */
+  display: block; /* Робимо кнопку блоковим елементом для роботи auto margin */
 }
 
 .background-image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%; /* Займає праву половину контейнера */
-    height: 100%;
-    background-image: url('/main.jpg'); /* Замініть на ваш шлях */
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: contain; /* Або cover, auto */
-    z-index: -1; /* Позаду основного контенту */
-  }
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%; /* Займає праву половину контейнера */
+  height: 100%;
+  background-image: url('/main.jpg'); /* Замініть на ваш шлях */
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain; /* Або cover, auto */
+  z-index: -1; /* Позаду основного контенту */
+}
 
+/* Стилі для секції Services */
+.services {
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 20px;
+  background-image: url('/background-service.png');
+  background-repeat: no-repeat; /* Щоб картинка не повторювалася */
+  background-position: center; /* Центруємо картинку */
+  background-size: cover;
+}
+
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.services-list {
+  display: flex; /* Використовуємо flexbox для розташування елементів в ряд */
+  flex-wrap: wrap; /* Дозволяємо блокам переноситися на новий рядок, якщо не вистачає місця */
+  justify-content: center; /* Вирівнюємо блоки по центру горизонталі */
+  gap: 20px; /* Задаємо відстань між блоками */
+  padding: 20px;
+}
+
+/* Стилі для окремої картки послуги (залишаються без змін) */
+.service {
+  background-color: transparent; 
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px; /* Або інша бажана ширина картки */
+  text-align: center;
+  display: flex; /* Робимо картку гнучким контейнером */
+  flex-direction: column; /* Розташовуємо елементи всередині вертикально */
+  justify-content: space-between; /* Розподіляємо простір між елементами */
+  align-items: center; /* Вирівнюємо елементи по центру горизонталі */
+}
+
+.service-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.service-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.service-button {
+  background-color: #92C5DB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+}
+
+.service-button:hover {
+  background-color: #77aacc;
+}
