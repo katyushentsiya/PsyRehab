@@ -5,6 +5,13 @@ import MainBlock from './components/MainBlock';
 import Service from './components/Service';
 
 function App() {
+
+  const navItems = [
+    { text: 'Головна', link: '#' },
+    { text: 'Послуги', link: '#' },
+    { text: 'Про нас', link: '#' },
+
+  ]
   const servicesData = [
     {
       title: 'Системна оцінки психологічного стану користувачів',
@@ -25,7 +32,7 @@ function App() {
 
   return (
     <div className="app">
-      <Header />
+      <Header navItems={navItems} />
       <div className="content-wrapper">
         <MainBlock />
       </div>

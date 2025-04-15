@@ -12,8 +12,9 @@
   color: black;
   position: fixed;
   top: 0;
-  left: 50%; /* Змінюємо відступ зліва на 50% */
-  transform: translateX(-50%); /* Центруємо хедер */
+  left: 50%; 
+  transform: translateX(-50%); 
+  z-index: 10; 
 }
 
 .header h1 {
@@ -34,8 +35,8 @@
 }
 
 .header nav li a {
-  color: black; /* Змінюємо колір посилань на чорний */
-  text-decoration: none; /* Видаляємо підкреслення */
+  color: black; 
+  text-decoration: none; 
 }
 
 .header nav li:last-child {
@@ -45,77 +46,213 @@
 .header button {
   width: 180px;
   height: 42px;
-  background-color: transparent; /* Робимо фон кнопки прозорим */
-  border: 1px solid black; /* Додаємо чорну обводку */
+  background-color: transparent; 
+  border: 1px solid black; 
   border-radius: 5px;
   box-sizing: border-box;
   margin: 0;
-  color: black; /* Додаємо чорний колір тексту */
+  color: black; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.header .login-button:hover {
+  background-color: #db97ba;
+}
+
+.header .login-button.active {
+  background-color: #db97ba;
+  color: black;
+}
+
+.header .login-button.active:hover {
+  background-color: rgba(251, 213, 245, 0.8);
+}
+
+.form {
+  background-color: rgba(251, 213, 245, 0.8);
+  border: 1px solid black;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 400px;
+  padding: 40px;
+  width: 400px;
+  margin-top: 400px; 
+  display: flex; /* Включаємо Flexbox для форми */
+  flex-direction: column; /* Розташовуємо дочірні елементи вертикально */
+  align-items: center; /* Вирівнюємо дочірні елементи по центру горизонталі */
+}
+
+
+.title {
+  color: black;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: black;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.ic1 {
+  margin-top: 30px;
+}
+
+.ic2 {
+  margin-top: 30px;
+}
+
+.input {
+  background-color: #010101ae;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #ffe0e6;
+  font-size: 18px;
+  height: 40px;
+  outline: none;
+  padding: 4px 10px 0;
+  width: 100%;
+}
+
+.cut {
+  background-color: #010101ae;
+  border-radius: 10px;
+  height: 10px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 76px;
+}
+
+.cut-short {
+  width: 30px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.placeholder {
+  color: #ffe0e6;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+  }
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #ffe0e6;
+}
+
+.input:focus ~ .placeholder {
+  color: rgba(251, 213, 245);
+}
+
+.submit {
+  background-color: #ffe0e6;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #ffe0e6;
+  cursor: pointer;
+  font-size: 20px; 
+  height: 60px; 
+  margin-top: 40px; 
+  text-align: center;
+  width: 100%;
+}
+
+.submit:hover {
+  background-color: #f4b9d7; 
+}
+
+.submit:active {
+  background-color: #db97ba;
 }
 
 .main-block {
-  /* Забираємо вирівнювання по центру для всього блоку */
-  width: 650px; /* Залишаємо задану ширину */
-  /* height: auto; /* Висота буде залежати від вмісту */
-  margin-top: 200px; /* Невеликий відступ після хедера */
-  margin-left: 200px; /* Залишаємо лівий відступ */
-  text-align: left; /* Вирівнюємо текст всередині блоку по лівому краю */
+  width: 650px; 
+  margin-top: 200px; 
+  margin-left: 200px; 
+  text-align: left; 
 }
 
 .main-block h2 {
-  font-size: 48px; /* Залишаємо заданий розмір */
-  margin-bottom: 20px; /* Зменшуємо відступ між заголовком та підзаголовком */
-  line-height: 1.2; /* Додаємо міжрядковий інтервал для кращого вигляду багаторядкового тексту */
+  font-size: 48px; 
+  margin-bottom: 20px; 
+  line-height: 1.2; 
 }
 
 .main-block p {
   margin-top: 0;
   margin-bottom: 50px;
-  width: 446px; /* Залишаємо задану ширину */
-  text-align: right; /* Вирівнюємо текст підзаголовка по центру */
-  margin-left: auto; /* Центруємо блок підзаголовка по горизонталі */
-  margin-right: auto; /* Центруємо блок підзаголовка по горизонталі */
+  width: 446px; 
+  text-align: right; 
+  margin-left: auto; 
+  margin-right: auto; 
   font-size: 24px;
   line-height: 1.5;
 }
 
 .main-block button {
-  width: 215px; /* Залишаємо задану ширину */
-  height: 60px; /* Залишаємо задану висоту */
+  width: 215px; 
+  height: 60px; 
   background-color: #92C5DB;
   border: none;
   border-radius: 5px;
   box-sizing: border-box;
-  margin-top: 30px; /* Додаємо відступ зверху від тексту */
-  color: black; /* Залишаємо чорний колір тексту */
-  font-size: 24px; /* Залишаємо заданий розмір шрифту */
-  text-align: center; /* Вирівнюємо текст кнопки по центру */
-  margin-left: auto; /* Центруємо кнопку по горизонталі */
-  margin-right: auto; /* Центруємо кнопку по горизонталі */
-  display: block; /* Робимо кнопку блоковим елементом для роботи auto margin */
+  margin-top: 30px; 
+  color: black; 
+  font-size: 24px; 
+  text-align: center; 
+  margin-left: auto;
+  margin-right: auto; 
+  display: block; 
 }
 
 .background-image {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50%; /* Займає праву половину контейнера */
+  width: 50%; 
   height: 100%;
-  background-image: url('/main.jpg'); /* Замініть на ваш шлях */
+  background-image: url('/main.jpg'); 
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: contain; /* Або cover, auto */
-  z-index: -1; /* Позаду основного контенту */
+  background-size: contain; 
+  z-index: -1; 
 }
 
-/* Стилі для секції Services */
 .services {
   padding: 40px 20px;
   text-align: center;
   margin-top: 20px;
   background-image: url('/background-service.png');
-  background-repeat: no-repeat; /* Щоб картинка не повторювалася */
-  background-position: center; /* Центруємо картинку */
+  background-repeat: no-repeat; 
+  background-position: center; 
   background-size: cover;
 }
 
@@ -126,25 +263,24 @@
 }
 
 .services-list {
-  display: flex; /* Використовуємо flexbox для розташування елементів в ряд */
-  flex-wrap: wrap; /* Дозволяємо блокам переноситися на новий рядок, якщо не вистачає місця */
-  justify-content: center; /* Вирівнюємо блоки по центру горизонталі */
-  gap: 20px; /* Задаємо відстань між блоками */
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 20px; 
   padding: 20px;
 }
 
-/* Стилі для окремої картки послуги (залишаються без змін) */
 .service {
   background-color: transparent; 
   border: 1px solid black;
   border-radius: 8px;
   padding: 20px;
-  width: 300px; /* Або інша бажана ширина картки */
+  width: 300px; 
   text-align: center;
-  display: flex; /* Робимо картку гнучким контейнером */
-  flex-direction: column; /* Розташовуємо елементи всередині вертикально */
-  justify-content: space-between; /* Розподіляємо простір між елементами */
-  align-items: center; /* Вирівнюємо елементи по центру горизонталі */
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+  align-items: center; 
 }
 
 .service-image {
@@ -175,3 +311,4 @@
 .service-button:hover {
   background-color: #77aacc;
 }
+
