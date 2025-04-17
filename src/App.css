@@ -78,11 +78,10 @@
   padding: 40px;
   width: 400px;
   margin-top: 400px; 
-  display: flex; /* Включаємо Flexbox для форми */
-  flex-direction: column; /* Розташовуємо дочірні елементи вертикально */
-  align-items: center; /* Вирівнюємо дочірні елементи по центру горизонталі */
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
 }
-
 
 .title {
   color: black;
@@ -312,3 +311,71 @@
   background-color: #77aacc;
 }
 
+/* components/About.css */
+
+.about {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* Центруємо вміст по горизонталі */
+  flex-direction: column; /* Впорядковуємо елементи вертикально */
+  align-items: center; /* Центруємо елементи по горизонталі */
+  margin-left: auto; /* Автоматичний лівий маргін */
+  margin-right: auto; /* Автоматичний правий маргін */
+  width: 1180px; /* Задаємо фіксовану ширину для центрування */
+}
+
+.about-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центруємо вміст контейнера по горизонталі */
+}
+
+.pro-nas-title-wrapper {
+  width: 436px;
+  height: 156px;
+  background-color: #f4b9d7; 
+  border-radius: 50% 50% 50% 50% / 0 0 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.about-title {
+  color: #333;
+  font-size: 2.5em;
+  margin: 0;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.about-text{
+  color: #555;
+  line-height: 1.8;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 0;
+  width: 1180px;
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 40px;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+.about::before {
+  width: 436px;
+  height: 156px;
+  background-color: transparent;
+  border-radius: 50% 50% 50% 50% / 0 0 100% 100%;
+  z-index: 0;
+}

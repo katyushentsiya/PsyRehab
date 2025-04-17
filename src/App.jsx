@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import MainBlock from './components/MainBlock';
 import Service from './components/Service';
+import About from './components/About';
 
 function App() {
 
@@ -50,6 +51,9 @@ function App() {
           ))}
         </div>
       </section>
+
+      <About />
+      
     </div>
   );
 }
