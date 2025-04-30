@@ -319,12 +319,12 @@
   padding-bottom: 100px;
   overflow: hidden;
   display: flex;
-  justify-content: center; /* Центруємо вміст по горизонталі */
-  flex-direction: column; /* Впорядковуємо елементи вертикально */
-  align-items: center; /* Центруємо елементи по горизонталі */
-  margin-left: auto; /* Автоматичний лівий маргін */
-  margin-right: auto; /* Автоматичний правий маргін */
-  width: 1180px; /* Задаємо фіксовану ширину для центрування */
+  justify-content: center; 
+  flex-direction: column; 
+  align-items: center; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 1180px;
 }
 
 .about-container {
@@ -333,7 +333,7 @@
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Центруємо вміст контейнера по горизонталі */
+  align-items: center; 
 }
 
 .pro-nas-title-wrapper {
@@ -378,4 +378,78 @@
   background-color: transparent;
   border-radius: 50% 50% 50% 50% / 0 0 100% 100%;
   z-index: 0;
+}
+
+/* components/Footer */
+
+.footer {
+  background-image: url('/footer.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px 20px;
+  color: black;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+}
+
+.logo-footer {
+  color: black;
+  margin: 0;
+  font-size: 28px;
+  line-height: 28px;
+}
+
+.footer-center {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0; 
+  display: flex;
+  gap: 80px; 
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links ul li a:hover {
+  color: black;
+}
+
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 50%; 
+}
+
+.social-icon:hover {
+  opacity: 1;
+}
+
+.copyright {
+  font-size: 0.9em;
+  opacity: 0.8;
 }

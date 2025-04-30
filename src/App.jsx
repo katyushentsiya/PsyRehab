@@ -4,13 +4,14 @@ import Header from './components/Header';
 import MainBlock from './components/MainBlock';
 import Service from './components/Service';
 import About from './components/About';
+import Footer from './components/Footer';
 
 function App() {
 
   const navItems = [
-    { text: 'Головна', link: '#' },
-    { text: 'Послуги', link: '#' },
-    { text: 'Про нас', link: '#' },
+    { text: 'Головна', link: '#main-block-section' },
+    { text: 'Послуги', link: '#services-section' },
+    { text: 'Про нас', link: '#about-section' },
 
   ]
   const servicesData = [
@@ -31,6 +32,18 @@ function App() {
     },
   ];
 
+  const footerLinks = [
+    { text: 'Головна', href: '#main-block-section' },
+    { text: 'Послуги', href: '#services-section' },
+    { text: 'Про нас', href: '#about-section' },
+  ];
+
+  const footerSocialIcons = [
+    { href: 'https://facebook.com', src: '/Facebook.png', alt: 'Facebook' },
+    { href: 'https://twitter.com', src: '/twitter.png', alt: 'Twitter' },
+    { href: 'https://instagram.com', src: '/instagram.png', alt: 'Instagram' },
+  ];
+
   return (
     <div className="app">
       <Header navItems={navItems} />
@@ -38,7 +51,7 @@ function App() {
         <MainBlock />
       </div>
 
-      <section className="services">
+      <section className="services" id="services-section">
         <h2>Наші послуги</h2>
         <div className="services-list">
           {servicesData.map((service, index) => (
@@ -53,6 +66,10 @@ function App() {
       </section>
 
       <About />
+      <Footer
+        links={footerLinks}
+        socialIcons={footerSocialIcons}
+      />
       
     </div>
   );
